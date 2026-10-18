@@ -57,6 +57,7 @@ raw_data/
 audio_downloads/
 cache/
 downloads/
+research/audio-datasets/raw_responses/
 *.tar
 *.tar.gz
 *.tgz
