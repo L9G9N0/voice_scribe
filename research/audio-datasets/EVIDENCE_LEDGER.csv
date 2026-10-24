@@ -241,3 +241,14 @@ defined_ai_doctor_patient,has_timestamps,True (Human-generated time-aligned tran
 defined_ai_doctor_patient,license,Commercial Enterprise License,https://www.defined.ai/,2026-10-18T10:15:00Z,page,1.0
 defined_ai_doctor_patient,access_type,commercial,https://www.defined.ai/,2026-10-18T10:15:00Z,page,1.0
 defined_ai_doctor_patient,citation,DefinedCrowd / Defined.ai Medical Speech Suite,https://www.defined.ai/,2026-10-18T10:15:00Z,page,0.9
+displace_2026,dataset_name,DISPLACE-M 2026: Multilingual Medical Conversational Challenge,https://displace2026.github.io/,2026-10-24T12:00:00Z,readme,1.0
+displace_2026,audio_available,True (Encrypted archives on Hugging Face; requires challenge password),https://huggingface.co/datasets/Displace-M/Displace2026,2026-10-24T12:00:00Z,api,1.0
+displace_2026,audio_hours,35.0,https://displace2026.github.io/,2026-10-24T12:00:00Z,page,0.9
+displace_2026,format,WAV (Zip encrypted),https://huggingface.co/datasets/Displace-M/Displace2026,2026-10-24T12:00:00Z,api,1.0
+displace_2026,sample_rate_hz,16000,https://displace2026.github.io/,2026-10-24T12:00:00Z,page,1.0
+displace_2026,speaker_count,"Multi-speaker (ASHAs, Patients, Family members)",https://displace2026.github.io/,2026-10-24T12:00:00Z,page,1.0
+displace_2026,has_role_labels,True (Healthcare worker vs. Patient topic and dialogue roles),https://displace2026.github.io/,2026-10-24T12:00:00Z,page,1.0
+displace_2026,has_timestamps,True (RTTM format turn boundaries),https://huggingface.co/datasets/Displace-M/Displace2026,2026-10-24T12:00:00Z,api,1.0
+displace_2026,license,Challenge Agreement (IISc LEAP Lab),https://displace2026.github.io/docs/Terms_and_Conditions_DISPLACE_2026.pdf,2026-10-24T12:00:00Z,page,1.0
+displace_2026,access_type,restricted,https://displace2026.github.io/#registration,2026-10-24T12:00:00Z,page,1.0
+displace_2026,citation,"LEAP Lab IISc Bangalore, DISPLACE-M 2026 / Interspeech 2026",https://displace2026.github.io/,2026-10-24T12:00:00Z,page,1.0

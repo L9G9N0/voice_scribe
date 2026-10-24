@@ -438,5 +438,25 @@
     "official_url": "https://www.defined.ai/",
     "license": "Commercial Enterprise License",
     "citation": "DefinedCrowd / Defined.ai Medical Speech Suite"
+  },
+  {
+    "dataset_id": "displace_2026",
+    "dataset_name": "DISPLACE-M 2026: Multilingual Medical Conversational Challenge",
+    "primary_category": "H",
+    "pipeline_stages": "Audio, ASR, Diarization, Role Attribution, Notes",
+    "audio_available": "True (Encrypted archives on Hugging Face; requires challenge password)",
+    "audio_hours": "35.0",
+    "sample_rate_hz": "16000",
+    "format": "WAV (Zip encrypted)",
+    "speaker_count": "Multi-speaker (ASHAs, Patients, Family members)",
+    "has_role_labels": "True (Healthcare worker vs. Patient topic and dialogue roles)",
+    "has_timestamps": "True (RTTM format turn boundaries)",
+    "language": "Hindi, Kannada, English",
+    "accent_dialect": "Indian Dialects (Rural/Semi-urban Indian Accents)",
+    "domain_clinical_relevance": "High (Authentic field recordings of community healthcare consultations in India)",
+    "access_type": "restricted",
+    "official_url": "https://displace2026.github.io/",
+    "license": "Challenge Agreement (IISc LEAP Lab)",
+    "citation": "LEAP Lab IISc Bangalore, DISPLACE-M 2026 / Interspeech 2026"
   }
 ]

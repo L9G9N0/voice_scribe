@@ -17,10 +17,11 @@ This research directory establishes a comprehensive, phase-wise, evidence-first 
 ```
 research/audio-datasets/
 ├── README.md                          # Master catalogue documentation (this file)
+├── TARGET_AUDIO_FEASIBILITY_REPORT.md # Empirical verification & acoustic feasibility report
 ├── SEARCH_PLAN.md                     # Initial search plan & 166-keyword universe
 ├── RESEARCH_LOG.md                    # Detailed log of search execution & seed verifications
-├── EVIDENCE_LEDGER.csv                # 242-row evidence ledger with full claim tracing
-├── dataset_catalog.csv                # 22 candidate datasets in standardized CSV schema
+├── EVIDENCE_LEDGER.csv                # 253-row evidence ledger with full claim tracing
+├── dataset_catalog.csv                # 23 candidate datasets in standardized CSV schema
 ├── dataset_catalog.json               # Full JSON representation matching CSV catalog
 ├── DATASET_COMPARISON.md              # 7-dimension scoring rubric, comparison matrix & gap analysis
 ├── SHORTLIST.md                       # Deep analysis of the Top 5 recommended datasets
@@ -61,6 +62,7 @@ research/audio-datasets/
 - **Category F: Small Datasets for First Tests**: `pauleyc_radiology_iphone`.
 - **Category G: Supplementary General Speech**: `librispeech`, `common_voice`.
 - **Category H: Restricted, Gated, Unsuitable or Unverified**:
+  * *Challenge Gated / Encrypted*: `displace_2026` (IISc LEAP Lab DUA & zip encryption password).
   * *Text-only (No Audio)*: `aci_bench`, `mts_dialog`.
   * *Gated / 401 Restricted*: `whissleai_simulated_exams`.
   * *Credentialed Clinical*: `physionet_egd_cxr`, `physionet_b2ai_voice`.
@@ -69,7 +71,21 @@ research/audio-datasets/
 
 ---
 
-## 5. Automation & Validation Scripts
+## 5. Feasibility Audit: Ambient Audio & Background Speech
+
+> [!IMPORTANT]
+> **Audio Verification Findings**: As established in [TARGET_AUDIO_FEASIBILITY_REPORT.md](TARGET_AUDIO_FEASIBILITY_REPORT.md), **no single open dataset in the world** contains live doctor-patient consultations with simultaneous competing background speech, clinic environmental noise, and pure target-only reference transcripts.
+>
+> - **`primock57` & `medial_speech`**: Clean isolated VoIP/telemedicine channels with a -92 dBFS noise floor; zero background speech or clinic noise.
+> - **`eka_medical_asr`**: Single-doctor dictated prescription sentences (10s chunks); zero patient dialogue or multi-speaker interaction.
+> - **`ami_corpus`**: Gold standard for multi-party conversational overlap and far-field arrays, but 100% non-medical with all 4 speakers in the same target discussion.
+> - **`displace_2026`**: Real ASHA field recordings in India with noise and diarization, but encrypted behind the official IISc challenge agreement.
+>
+> **Recommended Strategy**: Combine `primock57` (clean target consultations) + `eka_medical_asr` (Indian accents & drug entities) + `ami_corpus` (diarization engine baseline) with the **`ClinicalMix` Controlled Simulation Protocol** to benchmark background-speech isolation with untainted ground truth.
+
+---
+
+## 6. Automation & Validation Scripts
 
 ### Validate Catalog & Evidence Parity
 ```bash

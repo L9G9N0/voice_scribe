@@ -109,3 +109,17 @@ Following rigorous evaluation of 22 candidate corpora across 7 scoring dimension
 | **Indian English Clinical Accents** | `eka_medical_asr` | `ai4bharat/Svarah` |
 | **Clinical Note (SOAP) Benchmarking** | `primock57` | `synth_dopaco` / `aci_bench` (text) |
 | **Conversational Speaker Diarization** | `ami_corpus` | `voxconverse` |
+
+---
+
+## 6. Acoustic Feasibility & Background-Speech Isolation Audit
+
+An exhaustive physical inspection of downloaded audio samples was conducted across all shortlisted datasets (detailed in [TARGET_AUDIO_FEASIBILITY_REPORT.md](TARGET_AUDIO_FEASIBILITY_REPORT.md)):
+
+* **`primock57`**: Proved to be isolated VoIP tracks (-92 dBFS noise floor). It has perfect consultation transcripts and isolated channels, but **zero background chatter or clinic noise**.
+* **`medial_speech`**: Sequential turns between Robot/Doctor and Patient in quiet rooms (-53 dBFS floor). No overlapping voices or background chatter.
+* **`eka_medical_asr`**: Single-doctor read dictations (10s clips); zero patient speech, zero multi-speaker interaction.
+* **`synth_dopaco`**: Synthetic Kokoro-82M TTS audio with point sound effects (`[pen_clicking]`); no competing conversations.
+* **`ami_corpus`**: Realistic 4-speaker meeting room overlaps and distant arrays, but 100% non-medical with no target vs. background separation.
+
+**Conclusion**: No single shortlisted dataset meets our background-speech isolation requirement out-of-the-box. We recommend combining `primock57` and `eka_medical_asr` with the **`ClinicalMix` simulation protocol** (adding competing talkers from Svarah/MeDial-Speech and DEMAND noise) to maintain 100% uncompromised ground truth.
